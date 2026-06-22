@@ -2,8 +2,7 @@
 
 A single-page personal portfolio site for aerial / drone videography work. Built as one self-contained HTML file with a minimal, warm design and a clean tabbed layout.
 
-**Live site:** https://greenmouth.github.io
-
+**Live site:** https://shindemedia.com (also at https://greenmouth.github.io)
 ## About
 
 This is my personal portfolio and contact hub. It showcases my drone and videography reels, a bit about me, and an easy way to get in touch. The whole thing is intentionally lightweight — one HTML file, a couple of images, and free hosting.
@@ -21,7 +20,7 @@ This is my personal portfolio and contact hub. It showcases my drone and videogr
 ## Tech & Hosting
 
 - **Hosting:** GitHub Pages (free), from a repo named `greenmouth.github.io`. Upload files, enable Pages, and the site is live within a minute.
-- **Custom domain:** Registered through Porkbun (shindemedia.com), configured with A records plus a `www` CNAME, with HTTPS enabled.
+- **Custom domain:** shindemedia.com, registered through Porkbun and now the primary live URL — configured with A records plus a `www` CNAME, with HTTPS enabled. The greenmouth.github.io address redirects here.
 - **Forms:** Formspree (paste in a form ID).
 - **Tips:** Ko-fi.
 
