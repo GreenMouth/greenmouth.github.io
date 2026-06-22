@@ -135,6 +135,11 @@
   .about-grid p{margin-bottom:18px;color:var(--ink-soft)}
   .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
   .pill{font-size:.82rem;padding:8px 15px;border-radius:30px;background:rgba(255,255,255,.6);border:1px solid var(--line);color:var(--ink-soft)}
+  .airports{margin-top:30px;display:flex;flex-direction:column;gap:18px}
+  .ap-group{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px}
+  .ap-country{font-family:'Fraunces',serif;font-size:1.02rem;text-transform:lowercase;color:var(--ink);flex:0 0 150px}
+  .ap-group .pills{flex:1 1 320px;margin:0}
+  @media(max-width:560px){.ap-country{flex:0 0 100%}}
   @media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:30px}}
 
   /* background */
@@ -281,11 +286,29 @@
         <div>
           <p class="eyebrow" style="margin-bottom:14px">a few things i love</p>
           <div class="pills">
-            <span class="pill">aerial photography</span><span class="pill">cricket</span><span class="pill">football</span>
-            <span class="pill">logic pro</span><span class="pill">final cut pro</span><span class="pill">meditation</span>
-            <span class="pill">breathwork</span><span class="pill">consciousness</span><span class="pill">travel</span>
-            <span class="pill">nature</span><span class="pill">white-sand beaches</span>
+            <span class="pill">aerial photography</span><span class="pill">breathwork</span><span class="pill">consciousness</span>
+            <span class="pill">cricket</span><span class="pill">final cut pro</span><span class="pill">football</span>
+            <span class="pill">logic pro</span><span class="pill">meditation</span><span class="pill">nature</span>
+            <span class="pill">travel</span><span class="pill">white-sand beaches</span><span class="pill">yoga</span>
           </div>
+        </div>
+      </div>
+
+      <div class="subhead">
+        <p class="eyebrow">stamps in the passport</p>
+        <h3 style="font-size:clamp(1.6rem,3.2vw,2.2rem);max-width:720px">airports i've flown through.</h3>
+        <p class="lead" style="margin-top:14px">a running tally — sorted by country.</p>
+        <div class="airports">
+          <div class="ap-group"><span class="ap-country">brazil</span><div class="pills"><span class="pill">BSB · brasília</span><span class="pill">CWB · curitiba</span><span class="pill">FLN · florianópolis</span><span class="pill">IGU · foz do iguaçu</span><span class="pill">GIG · rio de janeiro</span><span class="pill">GRU · são paulo</span></div></div>
+          <div class="ap-group"><span class="ap-country">colombia</span><div class="pills"><span class="pill">BOG · bogotá</span></div></div>
+          <div class="ap-group"><span class="ap-country">finland</span><div class="pills"><span class="pill">HEL · helsinki</span></div></div>
+          <div class="ap-group"><span class="ap-country">india</span><div class="pills"><span class="pill">MAA · chennai</span><span class="pill">CJB · coimbatore</span><span class="pill">DEL · delhi</span><span class="pill">GOI · goa</span><span class="pill">HYD · hyderabad</span><span class="pill">JAI · jaipur</span><span class="pill">KUU · kullu–manali</span><span class="pill">LKO · lucknow</span><span class="pill">BOM · mumbai</span><span class="pill">PNQ · pune</span><span class="pill">SSE · solapur</span><span class="pill">VNS · varanasi</span></div></div>
+          <div class="ap-group"><span class="ap-country">panama</span><div class="pills"><span class="pill">PTY · panama city</span></div></div>
+          <div class="ap-group"><span class="ap-country">qatar</span><div class="pills"><span class="pill">DOH · doha</span></div></div>
+          <div class="ap-group"><span class="ap-country">switzerland</span><div class="pills"><span class="pill">ZRH · zurich</span></div></div>
+          <div class="ap-group"><span class="ap-country">uae</span><div class="pills"><span class="pill">AUH · abu dhabi</span><span class="pill">DXB · dubai</span></div></div>
+          <div class="ap-group"><span class="ap-country">united kingdom</span><div class="pills"><span class="pill">LHR · london</span></div></div>
+          <div class="ap-group"><span class="ap-country">united states</span><div class="pills"><span class="pill">ATL · atlanta</span><span class="pill">ORD · chicago</span><span class="pill">DFW · dallas</span><span class="pill">DEN · denver</span><span class="pill">LAS · las vegas</span><span class="pill">MIA · miami</span><span class="pill">EWR · newark</span><span class="pill">JFK · new york (jfk)</span><span class="pill">LGA · new york (laguardia)</span><span class="pill">MCO · orlando</span><span class="pill">SFO · san francisco</span><span class="pill">SJC · san jose</span></div></div>
         </div>
       </div>
 
