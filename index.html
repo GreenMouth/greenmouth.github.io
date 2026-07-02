@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Prashant Shinde — drone pilot & data scientist</title>
-<meta name="description" content="Prashant Sanjay Shinde — FAA Part 107 certified drone pilot and data scientist. Aerial photography, mapping, and inspections backed by a deep analytics background." />
+<title>Prashant Shinde</title>
+<meta name="description" content="Prashant Shinde — aerial photography and video. FAA Part 107 certified drone pilot." />
 <meta name="author" content="Prashant Sanjay Shinde" />
 
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Prashant Shinde — drone pilot & data scientist" />
-<meta property="og:description" content="FAA Part 107 certified drone pilot. Aerial photography, mapping & inspections, backed by data science." />
+<meta property="og:title" content="Prashant Shinde" />
+<meta property="og:description" content="Aerial photography and video — FAA Part 107 certified drone pilot." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -94,6 +94,23 @@
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.25)}
   .btn-ghost{border:1px solid rgba(255,255,255,.6);color:#fff;background:transparent}
   .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .btn-outline{border:1px solid var(--line);color:var(--ink);background:transparent}
+  .btn-outline:hover{border-color:var(--sky);color:var(--sky);transform:translateY(-2px)}
+
+  /* light hero */
+  .hero-light{background:var(--sand);color:var(--ink);min-height:calc(100vh - 64px)}
+  .hero-light .wrap{display:flex;align-items:center;gap:60px;padding-top:50px;padding-bottom:60px}
+  .hero-copy{flex:1 1 auto}
+  .hero-light .badge{border:1px solid var(--line);color:var(--ink-soft);backdrop-filter:none}
+  .hero-light h1{color:var(--ink)}
+  .hero-light .tag{color:var(--ink-soft)}
+  .hero-shot{flex:0 0 300px;align-self:stretch;max-height:520px;min-height:380px;border-radius:22px;
+    background:url('hero-portrait.jpg') center/cover;box-shadow:0 26px 60px rgba(28,26,23,.18)}
+  @media(max-width:820px){
+    .hero-light .wrap{flex-direction:column;gap:40px;text-align:center}
+    .hero-light .cta{justify-content:center}
+    .hero-shot{flex:0 0 auto;width:100%;max-width:340px;min-height:420px}
+  }
   .btn-sky{background:var(--sky);color:#fff}
   .btn-sky:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(47,111,143,.3)}
 
@@ -119,6 +136,29 @@
   .cert p{font-size:.98rem;color:var(--ink-soft)}
   .cert strong{color:var(--ink);font-weight:500}
 
+  /* apple-style drone tab */
+  .drone-sec{padding-top:70px}
+  .d-center{text-align:center}
+  .drone-hero{text-align:center;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.04;margin:10px 0 26px;text-transform:lowercase}
+  .drone-sub{text-align:center;font-size:clamp(1.1rem,2.2vw,1.35rem);font-weight:300;color:var(--ink-soft);max-width:600px;margin:0 auto;line-height:1.55}
+  .drone-gallery{display:flex;gap:18px;justify-content:center;margin:52px auto 0;max-width:540px}
+  .drone-gallery .g{flex:1;aspect-ratio:3/4;border-radius:20px;background-size:cover;background-position:center;box-shadow:0 22px 50px rgba(28,26,23,.16)}
+  @media(max-width:520px){.drone-gallery{gap:12px}}
+  .features{margin:24px 0 0}
+  .feature{text-align:center;padding:60px 0;border-top:1px solid var(--line)}
+  .feature:first-child{border-top:none}
+  .f-ico{display:inline-flex;color:var(--sky);margin-bottom:20px}
+  .f-ico svg{width:36px;height:36px}
+  .feature h3{font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:16px;text-transform:lowercase;line-height:1.08}
+  .feature p{font-size:clamp(1.05rem,2vw,1.2rem);color:var(--ink-soft);max-width:540px;margin:0 auto;line-height:1.6;font-weight:300}
+  .cert-a{text-align:center;margin-top:40px;padding-top:70px;border-top:1px solid var(--line)}
+  .cert-a-line{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.08;margin:8px 0 22px;text-transform:lowercase}
+  .d-center-cta{justify-content:center;margin-top:64px}
+  .cert-points{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;max-width:840px;margin:56px auto 0;text-align:center}
+  .cert-point h4{font-family:'Fraunces',serif;font-weight:400;font-size:1.2rem;text-transform:lowercase;margin-bottom:10px}
+  .cert-point p{font-size:.95rem;color:var(--ink-soft);line-height:1.55;font-weight:300}
+  @media(max-width:680px){.cert-points{grid-template-columns:1fr;gap:32px;max-width:420px}}
+
   /* work / reels */
   .reel-grid{display:flex;flex-wrap:wrap;gap:28px;margin-top:44px}
   .reel{margin:0;width:300px;max-width:100%}
@@ -139,8 +179,14 @@
   .ap-group{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px}
   .ap-country{font-family:'Fraunces',serif;font-size:1.02rem;text-transform:lowercase;color:var(--ink);flex:0 0 150px}
   .ap-group .pills{flex:1 1 320px;margin:0}
+  .ap-states{flex:1 1 320px;display:flex;flex-direction:column;gap:16px}
+  .ap-st-label{display:block;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .ap-state .pills{margin:0}
   @media(max-width:560px){.ap-country{flex:0 0 100%}}
   @media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:30px}}
+  .about-grid-photo{grid-template-columns:0.8fr 1.2fr;align-items:start}
+  .about-photo{border-radius:20px;background-size:cover;background-position:center;min-height:440px;box-shadow:0 22px 50px rgba(28,26,23,.16)}
+  @media(max-width:760px){.about-grid-photo{grid-template-columns:1fr}.about-photo{min-height:360px}}
 
   /* background */
   .subhead{margin-top:64px}
@@ -175,9 +221,10 @@
   .connect-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .clink{text-decoration:none;border:1px solid var(--line);border-radius:40px;padding:13px 26px;font-size:.92rem;background:rgba(255,255,255,.5);transition:all .2s;text-transform:lowercase}
   .clink:hover{border-color:var(--sky);color:var(--sky);transform:translateY(-2px)}
-  .chai{display:inline-block;text-decoration:none;border-radius:40px;padding:14px 30px;font-size:.95rem;
+  .chai{display:inline-block;text-decoration:none;border:none;cursor:pointer;font-family:inherit;border-radius:40px;padding:14px 30px;font-size:.95rem;
     background:linear-gradient(135deg,#c4783b,#9c5a28);color:#fff;letter-spacing:.02em;text-transform:lowercase;
     box-shadow:0 8px 22px rgba(156,90,40,.28);transition:transform .2s,box-shadow .2s}
+  .chai:disabled{cursor:default}
   .chai:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(156,90,40,.4)}
 
   footer{flex-shrink:0;padding:34px 0;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.82rem}
@@ -203,38 +250,64 @@
 
   <!-- ===== HOME ===== -->
   <section class="panel" id="home">
-    <div class="hero">
+    <div class="hero hero-light">
       <div class="wrap">
-        <span class="badge">faa part 107 certified · atlanta, ga</span>
-        <h1>i fly drones &amp;<br>read data.</h1>
-        <p class="tag">aerial photos and videos for anyone who wants to see their world from above — homes, real estate, events, travel, big moments. captured on site, delivered to you.</p>
-        <div class="cta">
-          <a class="btn btn-primary" href="#drone" data-tab="drone">see what i do</a>
-          <a class="btn btn-ghost" href="#connect" data-tab="connect">get in touch</a>
+        <div class="hero-copy">
+          <span class="badge">faa part 107 certified · atlanta, ga</span>
+          <h1>i fly drones &amp;<br>read data.</h1>
+          <p class="tag">aerial photos and videos for anyone who wants to see their world from above — homes, real estate, events, travel, big moments. captured on site, delivered to you.</p>
+          <div class="cta">
+            <a class="btn btn-sky" href="#drone" data-tab="drone">see what i do</a>
+            <a class="btn btn-outline" href="#connect" data-tab="connect">get in touch</a>
+          </div>
         </div>
+        <div class="hero-shot" role="img" aria-label="Aerial photo of a coastline cliff meeting the ocean"></div>
       </div>
     </div>
   </section>
 
   <!-- ===== DRONE ===== -->
   <section class="panel" id="drone">
-    <div class="sec"><div class="wrap">
-      <p class="eyebrow">drone services</p>
-      <h2 class="section-title">your world, from above</h2>
-      <p class="lead">for anyone — a couple on their wedding day, a realtor listing a home, a traveler, a family, a brand. you tell me what you want to capture; i fly it and hand you the shots. certified, careful, and delivered on site.</p>
+    <div class="sec drone-sec"><div class="wrap">
+      <p class="eyebrow d-center">drone services</p>
+      <h2 class="drone-hero">your world,<br>from above.</h2>
+      <p class="drone-sub">for anyone who wants to see their space differently. you tell me what to capture — i fly it, and hand you the shots. certified, careful, delivered on site.</p>
 
-      <div class="services">
-        <div class="card"><span class="ico">🎥</span><h3>photos &amp; video</h3><p>the heart of what i do. cinematic stills and short, scroll-stopping reels of your home, event, trip, or property — shot on site and delivered ready to share.</p></div>
-        <div class="card"><span class="ico">🏡</span><h3>real estate &amp; property</h3><p>sweeping overhead views that make a listing or a piece of land stand out — the whole place, shown the way photos from the ground never could.</p></div>
-        <div class="card"><span class="ico">🔍</span><h3>up-close looks</h3><p>roofs, structures, and hard-to-reach spots photographed safely from the air — a clear view of places you can't easily get to, no ladders.</p></div>
+      <div class="drone-gallery">
+        <div class="g" style="background-image:url('hero-portrait.jpg')" role="img" aria-label="Aerial shot of a coastline cliff"></div>
+        <div class="g" style="background-image:url('hero-sunset-portrait.jpg')" role="img" aria-label="Aerial shot of a beach at sunset"></div>
       </div>
 
-      <div class="cert">
-        <div class="seal">part<br>107</div>
-        <p><strong>faa part 107 remote pilot certified.</strong> that's the federal aviation administration's license to fly drones commercially in u.s. airspace — every flight planned around airspace rules, weather, and safety from the ground up.</p>
+      <div class="features">
+        <div class="feature">
+          <span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2L8 5h8l1.5 2h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="13" r="3.4"/></svg></span>
+          <h3>photos &amp; video</h3>
+          <p>cinematic stills and short, scroll-stopping reels of your home, event, or trip — shot on site and delivered ready to share.</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11 12 4l8 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/></svg></span>
+          <h3>real estate &amp; property</h3>
+          <p>sweeping overhead views that make a listing stand out — the whole place, shown the way photos from the ground never could.</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></span>
+          <h3>up-close looks</h3>
+          <p>roofs, structures, and hard-to-reach spots seen safely from the air — a clear view of places you can't easily get to. no ladders.</p>
+        </div>
       </div>
 
-      <div class="cta" style="margin-top:40px">
+      <div class="cert-a">
+        <p class="eyebrow d-center">faa part 107 certified</p>
+        <h3 class="cert-a-line">licensed to fly.<br>trained to be careful.</h3>
+        <p class="drone-sub">part 107 is the federal aviation administration's certification to fly drones commercially in u.s. airspace. it means you're hiring a pilot who's legally cleared, tested, and accountable — not just someone with a drone.</p>
+        <div class="cert-points">
+          <div class="cert-point"><h4>cleared for hire</h4><p>the license paid drone work actually requires — legal to fly your job, not just a hobby flight.</p></div>
+          <div class="cert-point"><h4>tested &amp; trained</h4><p>passed the faa exam on airspace, weather, and the rules that keep every flight safe.</p></div>
+          <div class="cert-point"><h4>flown by the rules</h4><p>each flight planned around altitude limits, no-fly zones, and the people on the ground below.</p></div>
+        </div>
+      </div>
+
+      <div class="cta d-center-cta">
         <a class="btn btn-sky" href="#work" data-tab="work">see sample reels</a>
         <a class="btn" style="border:1px solid var(--line)" href="#connect" data-tab="connect">book a flight</a>
       </div>
@@ -277,14 +350,12 @@
     <div class="sec"><div class="wrap">
       <p class="eyebrow">about</p>
       <h2 class="section-title">hi, i'm prashant</h2>
-      <div class="about-grid">
+      <div class="about-grid about-grid-photo">
+        <div class="about-photo" style="background-image:url('prashant.jpg')" role="img" aria-label="Prashant walking through a flower market in India"></div>
         <div>
-          <p>i'm a data scientist by craft and a drone pilot by curiosity. flying gives me a feel for the places i'm in — the shape of a coastline, the grid of a city, the quiet of a forest from a few hundred feet up.</p>
-          <p>i grew up in india and moved to the u.s. in august 2015 to begin my master's at the university of texas at dallas — now i call it home, a mix of two worlds i carry with me. away from the screen and the sticks, i play cricket for the <strong>atlanta chargers</strong> in leagues like super bash and the atlanta cricket league, and i've loved football since i played for my school team. i make music in logic pro, edit video in final cut, and i'll take a white-sand beach over a mountain any day.</p>
-          <p>i meditate, practice breathwork, and spend a lot of my inner life exploring spirituality and human consciousness. travel and time in nature are how i refill. there's more to the story — best told over a cup of chai.</p>
-        </div>
-        <div>
-          <p class="eyebrow" style="margin-bottom:14px">a few things i love</p>
+          <p>data scientist by craft, drone pilot by curiosity. flying gives me a feel for a place — a coastline, a city grid, a forest from a few hundred feet up.</p>
+          <p>born and raised in maharashtra, india; in the u.s. since 2015. off the clock: cricket with the <strong>atlanta chargers</strong>, music, meditation, and the pull of white-sand beaches. more of the story — best over a cup of chai.</p>
+          <p class="eyebrow" style="margin:26px 0 14px">a few things i love</p>
           <div class="pills">
             <span class="pill">aerial photography</span><span class="pill">breathwork</span><span class="pill">consciousness</span>
             <span class="pill">cricket</span><span class="pill">final cut pro</span><span class="pill">football</span>
@@ -299,25 +370,71 @@
         <h3 style="font-size:clamp(1.6rem,3.2vw,2.2rem);max-width:720px">airports i've flown through.</h3>
         <p class="lead" style="margin-top:14px">a running tally — sorted by country.</p>
         <div class="airports">
-          <div class="ap-group"><span class="ap-country">brazil</span><div class="pills"><span class="pill">BSB · brasília</span><span class="pill">CWB · curitiba</span><span class="pill">FLN · florianópolis</span><span class="pill">IGU · foz do iguaçu</span><span class="pill">GIG · rio de janeiro</span><span class="pill">GRU · são paulo</span></div></div>
-          <div class="ap-group"><span class="ap-country">colombia</span><div class="pills"><span class="pill">BOG · bogotá</span></div></div>
-          <div class="ap-group"><span class="ap-country">finland</span><div class="pills"><span class="pill">HEL · helsinki</span></div></div>
-          <div class="ap-group"><span class="ap-country">india</span><div class="pills"><span class="pill">MAA · chennai</span><span class="pill">CJB · coimbatore</span><span class="pill">DEL · delhi</span><span class="pill">GOI · goa</span><span class="pill">HYD · hyderabad</span><span class="pill">JAI · jaipur</span><span class="pill">KUU · kullu–manali</span><span class="pill">LKO · lucknow</span><span class="pill">BOM · mumbai</span><span class="pill">PNQ · pune</span><span class="pill">SSE · solapur</span><span class="pill">VNS · varanasi</span></div></div>
-          <div class="ap-group"><span class="ap-country">panama</span><div class="pills"><span class="pill">PTY · panama city</span></div></div>
-          <div class="ap-group"><span class="ap-country">qatar</span><div class="pills"><span class="pill">DOH · doha</span></div></div>
-          <div class="ap-group"><span class="ap-country">switzerland</span><div class="pills"><span class="pill">ZRH · zurich</span></div></div>
-          <div class="ap-group"><span class="ap-country">uae</span><div class="pills"><span class="pill">AUH · abu dhabi</span><span class="pill">DXB · dubai</span></div></div>
-          <div class="ap-group"><span class="ap-country">united kingdom</span><div class="pills"><span class="pill">LHR · london</span></div></div>
-          <div class="ap-group"><span class="ap-country">united states</span><div class="pills"><span class="pill">ATL · atlanta</span><span class="pill">ORD · chicago</span><span class="pill">DFW · dallas</span><span class="pill">DEN · denver</span><span class="pill">LAS · las vegas</span><span class="pill">MIA · miami</span><span class="pill">EWR · newark</span><span class="pill">JFK · new york (jfk)</span><span class="pill">LGA · new york (laguardia)</span><span class="pill">MCO · orlando</span><span class="pill">SFO · san francisco</span><span class="pill">SJC · san jose</span></div></div>
+          <div class="ap-group"><span class="ap-country">brazil</span><div class="ap-states">
+            <div class="ap-state"><span class="ap-st-label">são paulo</span><div class="pills"><span class="pill">GRU · são paulo</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">rio de janeiro</span><div class="pills"><span class="pill">GIG · rio de janeiro</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">paraná</span><div class="pills"><span class="pill">CWB · curitiba</span><span class="pill">IGU · foz do iguaçu</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">santa catarina</span><div class="pills"><span class="pill">FLN · florianópolis</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">distrito federal</span><div class="pills"><span class="pill">BSB · brasília</span></div></div>
+          </div></div>
+          <div class="ap-group"><span class="ap-country">colombia</span><div class="ap-states">
+            <div class="ap-state"><span class="ap-st-label">bogotá d.c.</span><div class="pills"><span class="pill">BOG · bogotá</span></div></div>
+          </div></div>
+          <div class="ap-group"><span class="ap-country">finland</span><div class="ap-states">
+            <div class="ap-state"><span class="ap-st-label">uusimaa</span><div class="pills"><span class="pill">HEL · helsinki</span></div></div>
+          </div></div>
+          <div class="ap-group"><span class="ap-country">india</span><div class="ap-states">
+            <div class="ap-state"><span class="ap-st-label">delhi</span><div class="pills"><span class="pill">DEL · delhi</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">rajasthan</span><div class="pills"><span class="pill">JAI · jaipur</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">punjab</span><div class="pills"><span class="pill">IXC · mohali</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">himachal pradesh</span><div class="pills"><span class="pill">KUU · kullu–manali</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">uttar pradesh</span><div class="pills"><span class="pill">LKO · lucknow</span><span class="pill">VNS · varanasi</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">maharashtra</span><div class="pills"><span class="pill">BOM · mumbai</span><span class="pill">PNQ · pune</span><span class="pill">SSE · solapur</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">goa</span><div class="pills"><span class="pill">GOI · goa</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">telangana</span><div class="pills"><span class="pill">HYD · hyderabad</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">tamil nadu</span><div class="pills"><span class="pill">MAA · chennai</span><span class="pill">CJB · coimbatore</span></div></div>
+          </div></div>
+          <div class="ap-group"><span class="ap-country">panama</span><div class="ap-states">
+            <div class="ap-state"><span class="ap-st-label">panamá province</span><div class="pills"><span class="pill">PTY · panama city</span></div></div>
+          </div></div>
+          <div class="ap-group"><span class="ap-country">puerto rico</span><div class="ap-states">
+            <div class="ap-state"><span class="ap-st-label">aguadilla</span><div class="pills"><span class="pill">BQN · aguadilla</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">san juan</span><div class="pills"><span class="pill">SJU · san juan</span></div></div>
+          </div></div>
+          <div class="ap-group"><span class="ap-country">qatar</span><div class="ap-states">
+            <div class="ap-state"><span class="ap-st-label">doha</span><div class="pills"><span class="pill">DOH · doha</span></div></div>
+          </div></div>
+          <div class="ap-group"><span class="ap-country">switzerland</span><div class="ap-states">
+            <div class="ap-state"><span class="ap-st-label">canton of zürich</span><div class="pills"><span class="pill">ZRH · zurich</span></div></div>
+          </div></div>
+          <div class="ap-group"><span class="ap-country">uae</span><div class="ap-states">
+            <div class="ap-state"><span class="ap-st-label">abu dhabi</span><div class="pills"><span class="pill">AUH · abu dhabi</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">dubai</span><div class="pills"><span class="pill">DXB · dubai</span></div></div>
+          </div></div>
+          <div class="ap-group"><span class="ap-country">united kingdom</span><div class="ap-states">
+            <div class="ap-state"><span class="ap-st-label">england</span><div class="pills"><span class="pill">LHR · london</span></div></div>
+          </div></div>
+          <div class="ap-group"><span class="ap-country">united states</span><div class="ap-states">
+            <div class="ap-state"><span class="ap-st-label">georgia</span><div class="pills"><span class="pill">ATL · atlanta</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">florida</span><div class="pills"><span class="pill">MCO · orlando</span><span class="pill">FLL · fort lauderdale</span><span class="pill">MIA · miami</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">new york</span><div class="pills"><span class="pill">JFK · john f. kennedy</span><span class="pill">LGA · laguardia</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">new jersey</span><div class="pills"><span class="pill">EWR · newark</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">illinois</span><div class="pills"><span class="pill">ORD · chicago</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">arkansas</span><div class="pills"><span class="pill">XNA · bentonville</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">texas</span><div class="pills"><span class="pill">DFW · dallas</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">colorado</span><div class="pills"><span class="pill">DEN · denver</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">nevada</span><div class="pills"><span class="pill">LAS · las vegas</span></div></div>
+            <div class="ap-state"><span class="ap-st-label">california</span><div class="pills"><span class="pill">SFO · san francisco</span><span class="pill">SJC · san jose</span></div></div>
+          </div></div>
         </div>
       </div>
 
       <div class="subhead">
         <p class="eyebrow">the other half of me</p>
         <h3 style="font-size:clamp(1.6rem,3.2vw,2.2rem);max-width:720px">by day, i'm a data scientist.</h3>
-        <p class="lead" style="margin-top:18px">for 8+ years i've built machine learning at companies like carter's, walmart, and accenture — work i genuinely love, that taught me patience, precision, and how to spot a pattern in the noise.</p>
-        <p class="lead" style="margin-top:16px">it started when i moved to the u.s. for a master of science at the <a href="https://www.utdallas.edu/" target="_blank" rel="noopener">university of texas at dallas</a> (2015–2017), living in dallas, texas through those years. i later began a second master's at <a href="https://www.gatech.edu/" target="_blank" rel="noopener">georgia tech</a> — then life happened, and i stepped away before finishing it. (lol.)</p>
-        <p class="lead" style="margin-top:16px">flying is how i get out of the screen. it scratches the same itch from the opposite direction: instead of chasing signal in data, i'm chasing light, weather, and the perfect frame. two different ways of paying close attention to the world — and i bring the same care to both.</p>
+        <p class="lead" style="margin-top:18px">8+ years building machine learning at carter's, walmart, and accenture — work that taught me patience, precision, and how to find the signal in the noise.</p>
+        <p class="lead" style="margin-top:16px">it began with a master's at the <a href="https://www.utdallas.edu/" target="_blank" rel="noopener">university of texas at dallas</a> (2015–2017), and a second at <a href="https://www.gatech.edu/" target="_blank" rel="noopener">georgia tech</a> i left before finishing.</p>
+        <p class="lead" style="margin-top:16px">flying is how i step away from the screen — same instinct, opposite direction. instead of signal in data, i'm chasing light, weather, and the perfect frame.</p>
       </div>
     </div></div>
   </section>
@@ -355,8 +472,9 @@
         <a class="clink" href="https://www.youtube.com/@ShindeDMT/shorts" target="_blank" rel="noopener">youtube ↗</a>
       </div>
 
-      <p class="or" style="margin-top:46px">enjoying the work?</p>
-      <a class="chai" href="https://ko-fi.com/YOUR_USERNAME" target="_blank" rel="noopener">☕ buy me a chai</a>
+      <p class="or" style="margin-top:46px">a little feature i'm testing</p>
+      <button type="button" class="chai" onclick="var n=document.getElementById('chai-note');n.style.display='block';this.style.opacity='.6';this.disabled=true;">☕ don't buy me a chai</button>
+      <p id="chai-note" style="display:none;font-size:.92rem;color:var(--ink-soft);margin-top:16px;max-width:460px;margin-left:auto;margin-right:auto">haha — just testing this button out, no chai needed. keep your money and thanks for stopping by. ☕</p>
     </div></div>
   </section>
 
